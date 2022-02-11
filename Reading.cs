@@ -12,8 +12,8 @@ namespace Reading
 
       var Ocr = new IronTesseract();
       Ocr.Language = OcrLanguage.English;
-      var Result = Ocr.Read(File);
-      return Result.Text; //Note for Debugging: Problem may be returning this as a Text file//
+      var Result = IronTesseract().Read(File).Text;
+      return Result
     }
   }
 }
